@@ -1,0 +1,38 @@
+package com;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+@SpringBootTest
+public class CalculateServiceTest {
+CalculateService c=new CalculateService();
+
+@Test()
+public void add()
+{
+	Assertions.assertEquals("30",c.sum());
+	
+}
+public void subtract_test()
+{
+	Assertions.assertEquals("-10",c.subtract());
+	
+}
+public void multi_test()
+{
+	Assertions.assertEquals("200",c.multi());
+	
+}
+public void divide_test()
+{
+	Assertions.assertEquals("0",c.divide());
+	
+}
+public void modulo_test()
+{
+	Assertions.assertEquals("30",c.sum());
+	
+}
+}

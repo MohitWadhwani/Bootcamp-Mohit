@@ -1,0 +1,44 @@
+package com;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class StringexamplesDemo {
+	
+	@GetMapping
+	public String stringReplace()
+	{
+		String s="Welcome to which Bootcamp";
+			
+		return s.replace("which", "Devops");
+	}
+	@GetMapping
+	public int Stringlength()
+	{
+		String s="Devops Engineer";
+				
+		return s.length();
+	}
+	
+	
+	@GetMapping
+	public String stringuppertolower()
+	{
+		String s="Devops Engineer";
+		return s.toLowerCase();
+	}
+	
+	@GetMapping
+	public String stringlowertoupper()
+	{
+		String s="Devops Engineer";
+		return s.toUpperCase();
+	}
+	@GetMapping
+	public String stringConcat()
+	{
+		String s1="Devops";
+		String s2="Engineer";
+		return s1.concat(s2);
+	}
+}

@@ -1,0 +1,2 @@
+spring.resources.static-locations=E:\\Devops Bootcamp workspace\\cicd-pipeline\\src\\main\\resources\\static\\
+server.port=9090

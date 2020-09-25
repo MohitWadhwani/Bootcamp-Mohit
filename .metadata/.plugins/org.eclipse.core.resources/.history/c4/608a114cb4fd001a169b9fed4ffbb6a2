@@ -1,0 +1,4 @@
+FROM tomcat:8.0.20-jre8
+RUN mkdir /usr/local/tomcat/webapps/dynamic-web--bootcamp
+COPY dynamic-web--bootcamp.war /usr/local/tomcat/webapps/
+MAINTAINER "mohitwadhwani2302@gmail.com"

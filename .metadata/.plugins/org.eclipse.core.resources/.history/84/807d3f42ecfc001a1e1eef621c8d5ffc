@@ -1,0 +1,38 @@
+package com;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class CalculateService1 {
+
+	@GetMapping ("/hello")
+	public String sayHi() {
+		return "Hello!!!";
+	}
+	@GetMapping ("/sum")
+	public Integer sum () {
+		int num1=10;
+		int num2=20;
+		return num1+num2;
+	}
+	@GetMapping ("/subtract/{num1}/{num2}")
+	public int subtract (@PathVariable("num1") int num1,@PathVariable("num2") int num2) {
+		return (num1-num2);
+	}
+	@GetMapping ("/multi/{num1}/{num2}")
+	public int multi (@RequestParam("num1") int num1,@RequestParam("num2") int num2) {
+		return (num1*num2);
+	}
+	@GetMapping ("/divide/{num1}/{num2}")
+	public int divide (@PathVariable int num1,@PathVariable int num2) {
+		return (num1/num2);
+	}
+	@GetMapping ("/modulo /{num1}/{num2}")
+	public int modulo(@PathVariable int num1,@PathVariable int num2) {
+		return (num1%num2);
+	}
+	
+}

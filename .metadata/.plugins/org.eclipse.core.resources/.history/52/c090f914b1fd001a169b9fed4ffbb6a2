@@ -1,0 +1,5 @@
+FROM tomcat:8.0-alpine
+ADD dynamic-web--bootcamp /usr/local/tomcat/webapps/
+EXPOSE 9090
+CMD ["catalina.sh", "run"]
+MAINTAINER "mohitwadhwani2302@gmail.com"
